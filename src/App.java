@@ -26,7 +26,7 @@ public class App {
                 break;
 
                 case 3:
-                mostrarMensajeNum(mostrarAreaCuadrado());
+                    mostrarMensajeNum(mostrarAreaCuadrado());
                 break;
         
             default:
