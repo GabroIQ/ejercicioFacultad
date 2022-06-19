@@ -18,15 +18,15 @@ public class App {
         }
         switch (opcionSolicitada) {
             case 1:
-                mostrarMensajeNum(mostrarAreaCirculo());
+                    mostrarMensajeNum(mostrarAreaCirculo());
                 break;
 
                 case 2:
-                
+                    mostrarMensajeNum(mostrarAreaTrangulo());
                 break;
 
                 case 3:
-                
+                mostrarMensajeNum(mostrarAreaCuadrado());
                 break;
         
             default:
@@ -34,7 +34,7 @@ public class App {
         }
     }
 
-    //OPCION DE NUMERO
+     //FUNCION PARA AREA DE UN CIRCULO
     public static float mostrarAreaCirculo() {
         int radio;
         float resultado;
@@ -45,6 +45,30 @@ public class App {
         return resultado;
     }
 
+    //FUNCION PARA AREA DE UN TRIANGULO
+    public static float mostrarAreaTrangulo() {
+        int base;
+        int altura;
+        float resultado;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese la base del trangulo: ");
+        base = scanner.nextInt();
+        System.out.println("Ingrese la altura del triangulo: ");
+        altura = scanner.nextInt();
+        resultado = (float) ((base * altura) / 2); 
+        return resultado;
+    }
+    //FUNCION PARA AREA DE UN CUADRADO
+    public static float mostrarAreaCuadrado() {
+        int lado;
+        float resultado;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Cuanto mide uno de los lados de su cuadrado a calcular?: ");
+        lado = scanner.nextInt();
+        resultado = (float) (lado * lado); 
+        return resultado;
+    }
+
     public static Void mostrarMensaje(String mensaje) {
         System.out.println(mensaje);
         return null;
@@ -52,6 +76,6 @@ public class App {
 
     public static Float mostrarMensajeNum(Float mensaje) {
         System.out.println(mensaje);
-        return null;
+        return null;   
     }
 }
